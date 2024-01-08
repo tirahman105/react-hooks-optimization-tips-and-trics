@@ -12,10 +12,17 @@ const UseStateExample2 = () => {
     // console.log({ name, email });
   };
 
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(user);
+    const inputName = e.target.name;
+    const value = e.target.value;
+    setUser({ ...user, [inputName]: value });
+  };
+
   return (
     <form onSubmit={handleSubmit} className="bg-slate-400 p-10 mt-5 rounded-xl">
       <input
-        onChange={(e) => setUser({ ...user, name: e.target.value })}
+        onChange={handleChange}
         className="mx-4 p-2 rounded-lg"
         type="text"
         name="name"
@@ -23,7 +30,7 @@ const UseStateExample2 = () => {
         placeholder="Your Name"
       />
       <input
-        onChange={(e) => setUser({ ...user, email: e.target.value })}
+        onChange={handleChange}
         className="mx-4 p-2 rounded-lg"
         type="email"
         name="email"
