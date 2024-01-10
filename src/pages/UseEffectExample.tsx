@@ -2,23 +2,36 @@ import React, { useEffect, useState } from "react";
 
 const UseEffectExample = () => {
   const [hidden, setHidden] = useState(false);
-  useEffect(() => {
-    console.log("Render");
 
-    return () => {
-      console.log("Inside clean up ");
-    };
-  }, [hidden]);
   return (
     <div>
-      <h1 className="text-3xl">this is use effect</h1>
       <button
         onClick={() => setHidden((prev) => !prev)}
-        className="btn-primary"
+        className="m-10 btn-primary"
       >
-        Click
+        {hidden ? "Show" : "Hide"}
       </button>
+      {!hidden && <Counter></Counter>}
     </div>
+  );
+};
+
+const Counter = () => {
+  const [count, setCount] = useState(0);
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      console.log("Render");
+      setCount((prev) => prev + 1);
+    }, 1000);
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
+
+  return (
+    <h1 className="bg-slate-400 p-10 text-7xl rounded-lg text-white">
+      {count}
+    </h1>
   );
 };
 
