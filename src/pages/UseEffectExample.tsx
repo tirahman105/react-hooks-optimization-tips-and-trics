@@ -3,16 +3,28 @@ import FetchCleanup from "./FetchCleanup";
 
 const UseEffectExample = () => {
   const [hidden, setHidden] = useState(false);
+  const [user, setUser] = useState({ name: "", email: "" });
+
+  useEffect(() => {
+    console.log("Render");
+  }, [user.name, user.email]);
 
   return (
-    <div>
-      <button
-        onClick={() => setHidden((prev) => !prev)}
-        className="m-10 btn-primary"
-      >
-        {hidden ? "Show" : "Hide"}
-      </button>
-      {!hidden && <Todo></Todo>}
+    <div className="bg-slate-400 p-10">
+      <input
+        onBlur={(e) => setUser({ ...user, name: e.target.value })}
+        type="text"
+        name="name"
+        id="name"
+        className="mx-4 p-2 rounded-lg"
+      />
+      <input
+        onBlur={(e) => setUser({ ...user, email: e.target.value })}
+        type="text"
+        name="email"
+        id="email"
+        className="mx-4 p-2 rounded-lg border"
+      />
     </div>
   );
 };
