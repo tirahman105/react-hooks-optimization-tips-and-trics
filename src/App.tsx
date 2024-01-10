@@ -5,6 +5,7 @@ import UseStateExample2 from "./pages/UseStateExample2";
 import UseReducerExample from "./pages/UseReducerExample";
 import UseReducerExample2 from "./pages/UseReducerTypescript";
 import UseEffectExample from "./pages/useEffectExample";
+import FetchCleanup from "./pages/FetchCleanup";
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -21,6 +22,7 @@ function App() {
 
       {/* <UseReducerExample2></UseReducerExample2> */}
       <UseEffectExample></UseEffectExample>
+      {/* <FetchCleanup></FetchCleanup> */}
     </div>
   );
 }
