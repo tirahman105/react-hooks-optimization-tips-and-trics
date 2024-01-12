@@ -26,6 +26,12 @@
   border-color: #3498db;
 }
 
+.card {
+  background-color: lightblue;
+  border-radius: 10px;
+  padding: 10px;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
