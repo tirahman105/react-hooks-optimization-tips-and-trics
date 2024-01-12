@@ -6,6 +6,8 @@ import UseReducerExample from "./pages/UseReducerExample";
 import UseReducerExample2 from "./pages/UseReducerTypescript";
 import UseEffectExample from "./pages/useEffectExample";
 import FetchCleanup from "./pages/FetchCleanup";
+import UseRef from "./pages/UseRef";
+import UseRefExample from "./pages/UseRefExample";
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -21,8 +23,10 @@ function App() {
       {/* <UseReducerExample></UseReducerExample> */}
 
       {/* <UseReducerExample2></UseReducerExample2> */}
-      <UseEffectExample></UseEffectExample>
+      {/* <UseEffectExample></UseEffectExample> */}
       {/* <FetchCleanup></FetchCleanup> */}
+      {/* <UseRef></UseRef> */}
+      <UseRefExample></UseRefExample>
     </div>
   );
 }
