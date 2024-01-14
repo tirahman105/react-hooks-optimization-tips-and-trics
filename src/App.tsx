@@ -14,6 +14,7 @@ import UseAvatar from "./Components/UseAvatar";
 import Profile from "./pages/hooksPages/Profile";
 import GameResult from "./pages/hooksPages/GameResult";
 import UsersContainer from "./Components/UsersContainer";
+import Select from "./Components/Select";
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -43,7 +44,14 @@ function App() {
       {/* <UseRefExample></UseRefExample> */}
       {/* <Profile></Profile>
       <GameResult></GameResult> */}
-      <UsersContainer></UsersContainer>
+      {/* <UsersContainer></UsersContainer> */}
+
+      <Select>
+        <Select.SelectOption value="Option1">Option 1</Select.SelectOption>
+        <Select.SelectOption value="Option2">Option 2</Select.SelectOption>
+        <Select.SelectOption value="Option3">Option 3</Select.SelectOption>
+        <Select.SelectOption value="Option4">Option 4</Select.SelectOption>
+      </Select>
     </div>
   );
 }
