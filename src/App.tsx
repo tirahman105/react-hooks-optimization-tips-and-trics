@@ -13,6 +13,7 @@ import { MenuItem, MenuList } from "./Components/Menu";
 import UseAvatar from "./Components/UseAvatar";
 import Profile from "./pages/hooksPages/Profile";
 import GameResult from "./pages/hooksPages/GameResult";
+import UsersContainer from "./Components/UsersContainer";
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -40,8 +41,9 @@ function App() {
       {/* <FetchCleanup></FetchCleanup> */}
       {/* <UseRef></UseRef> */}
       {/* <UseRefExample></UseRefExample> */}
-      <Profile></Profile>
-      <GameResult></GameResult>
+      {/* <Profile></Profile>
+      <GameResult></GameResult> */}
+      <UsersContainer></UsersContainer>
     </div>
   );
 }
